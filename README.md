@@ -41,7 +41,7 @@ I redesigned the model into a standard Star Schema. This involved:
 ![Alt Text](https://github.com/OssFad/Data-Modeling-Project-using-Power-BI/blob/main/images/data_modeling_after.PNG)
 
 
-## 🔑 Key Data Transformations (Power Query / M)
+## 🔑 Key Data Transformations (Power Query)
 
 * Append & Combine: Appended ORDERS\_2025 and ORDERS\_2026 into a single unified fact table.  
 * Data Cleansing: Filtered out test accounts (e.g., CustomerID 9999\) and obsolete products (e.g., ProductCode 'ZZZ-000') from the final dataset.  
@@ -52,14 +52,17 @@ I redesigned the model into a standard Star Schema. This involved:
 
 Here are a few examples of the business logic implemented using DAX:
 
-\# Calculate Revenue, respecting exchange ratesTotal Revenue (USD) \= SUMX(    fact\_sales,    fact\_sales\[LineTotal\] \* RELATED(exchange\_rates\[Rate\]))\# Days to Deliver (Shipping efficiency)Avg Days to Deliver \= AVERAGEX(    fact\_sales,    DATEDIFF(fact\_sales\[ShipDate\], fact\_sales\[DeliveryDate\], DAY))\# Campaign ROI (Marketing Efficiency)Campaign ROI \= DIVIDE(    \[Total Revenue from Campaign SKUs\],    SUM(fact\_campaign\_spend\[Spend\]))
+# Calculate the Revenue
+# Calculate the total Orders
+# Calculate the Total Active Customers
+# Calculate the Average Orders to Pay
 
 ## 📂 Repository Structure
 
 * /data: Contains the raw dataset.xlsx file used for the project.  
 * /images: Contains the before/after data model screenshots.  
 * /pbix: Contains the final Power BI file (.pbix).  
-* /docs: Data dictionary detailing table grains and relationships.
+
 
 ## 💡 Business Impact
 
