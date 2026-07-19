@@ -52,10 +52,10 @@ I redesigned the model into a standard Star Schema. This involved:
 
 Here are a few examples of the business logic implemented using DAX:
 
-#### Calculate the Revenue
-#### Calculate the total Orders
-#### Calculate the Total Active Customers
-#### Calculate the Average Orders to Pay
+#### - Calculate the Revenue
+#### - Calculate the total Orders
+#### - Calculate the Total Active Customers
+#### - Calculate the Average Orders to Pay
 
 ## 📂 Repository Structure
 
