@@ -9,7 +9,7 @@ This project demonstrates the end-to-end transformation of a fragmented, operati
 ## 🛠 Tools & Technologies
 
 * Data Modeling & Visualization: Power BI  
-* ETL / Data Preparation: Power Query (M)  
+* ETL / Data Preparation: Power Query   
 * Analytics Engine: DAX (Data Analysis Expressions)
 
 ## 📈 The Business Problem
@@ -25,7 +25,9 @@ The source system consisted of isolated operational tables (orders, invoices, pa
 
 ### Before (Operational Schema)
 
-The initial structure was a complex web of operational tables. While normalized for data entry, it was highly inefficient for BI querying.Before Data Modeling
+The initial structure was a complex web of operational tables. While normalized for data entry, it was highly inefficient for BI querying.
+![Alt Text](https://github.com/OssFad/Data-Modeling-Project-using-Power-BI/blob/main/images/data_modeling_before.PNG)
+
 
 ### After (Star Schema)
 
@@ -36,7 +38,8 @@ I redesigned the model into a standard Star Schema. This involved:
 * Role-Playing Dimensions: Handled multiple dates in the same fact table (e.g., Order Date, Ship Date, Payment Date) using role-playing dimensions via DAX USERELATIONSHIP.  
 * Row-Level Security (RLS): Implemented dynamic RLS using the security table to ensure regional managers only see data relevant to their territory.
 
-After Data Modeling
+![Alt Text](https://github.com/OssFad/Data-Modeling-Project-using-Power-BI/blob/main/images/data_modeling_after.PNG)
+
 
 ## 🔑 Key Data Transformations (Power Query / M)
 
