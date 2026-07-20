@@ -1,4 +1,4 @@
-# Data-Modeling-Project-using-Power-BI
+# Data Modeling Project using Power BI
 
 # Enterprise Sales & Financial Analytics Data Model
 
